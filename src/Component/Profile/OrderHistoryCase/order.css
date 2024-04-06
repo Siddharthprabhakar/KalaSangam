@@ -1,0 +1,86 @@
+
+.order-history h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.OrderSort {
+  background-color: #000;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  margin-bottom: 10px; 
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.OrderSort:hover {
+  background-color: white;
+  border-color: white; 
+  color: #000000;
+  font-weight: 800;
+}
+
+.ordersortoptioncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.date-options {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.date-label {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  margin-right: 10px; /* Add spacing between elements */
+}
+
+.radio-label {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  padding: 5px;
+  padding-bottom: 10px; 
+}
+
+.order-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.order-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.order-card p {
+  margin: 5px 0;
+}

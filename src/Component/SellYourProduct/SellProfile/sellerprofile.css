@@ -1,0 +1,64 @@
+.sellerbutton {
+    width: 200px;
+    background-color: black ; 
+    color: #333;
+    margin:
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+}
+/* Container for rows */
+.sellerbutton-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing between rows */
+}
+
+/* Rows */
+.sellerbutton-row {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Add margin between rows */
+}
+
+/* Email paragraph */
+.sellerbutton-email {
+  color: #333; /* Minimal color */
+}
+
+.sellerbutton-btn {
+  width: 200px;
+  background-color: #f0f0f0; 
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.sellerbutton-btn:hover{
+    background-color: white;
+    border-color: #007bff; 
+    color: #000000;
+    Font-weight: 600;
+}
+
+/* Delete button */
+.sellerbutton-btn-delete {
+  width: 200px;
+  background-color: #FF0000; 
+  color: white; 
+}
+
+.sellerbutton-btn-delete:hover {
+  background-color: white;
+  border-color: #FF0000; 
+  color: #000000;
+  Font-weight: 600;
+}

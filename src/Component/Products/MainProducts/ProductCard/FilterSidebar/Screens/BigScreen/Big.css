@@ -1,0 +1,80 @@
+.Sidebar {
+  position: relative;
+  width: 320px;
+  height: 700px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.Sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.Sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: transform 0.3s ease; /* Apply transition to transform property */
+  border: none;
+  cursor: pointer;
+}
+
+.Sidebar-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-option button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.filter-option button:hover {
+  background-color: #0056b3;
+}
+
+.big-options {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.big-label {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  margin-right: 10px; /* Add spacing between elements */
+}
+
+.radio-label {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  padding: 5px; /* Add spacing between elements */
+}
+
+.big-square {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Add spacing between square and text */
+}

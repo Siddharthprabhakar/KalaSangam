@@ -1,4 +1,3 @@
-import './Home.css';
 import { EndSection } from '../Footer/EndSection'
 import ReactFullpage from '@fullpage/react-fullpage';
 import { SectionOne } from './Sections/SectionOne/SectionOne';
@@ -31,7 +30,7 @@ export function Home() {
             <SectionFour />
           </div>
 
-          <div className="section">
+          <div className="section" style={{ height: '80vh', backgroundColor: "Black" }} >
             <EndSection />
           </div>
 

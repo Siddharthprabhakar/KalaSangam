@@ -1,67 +1,127 @@
-.section-one-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f5f5f5;
-  padding: 50px 0;
-  text-align: center;
-  width: 100%;
-  min-height: 100vh; /* Use min-height to ensure it takes at least the full viewport height */
-  background-size: cover;
-  background-image: url('../../../../Assets/hero.jpg');
-  background-position: center;
-  filter: grayscale(40%);
+.sectionOne * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  cursor: pointer;
 }
-
-.content-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
+.sectionOne body {
+  background-color: #eaeaea;
+  overflow: hidden;
 }
-
-.text-container {
-  padding: 20px;
-  margin-bottom: 50px; 
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+.sectionOne .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  padding: 50px;
+  background-color: #f5f5f5;
+  box-shadow: 0 30px 50px #a9a8a8;
 }
-
-h2.main-text {
-  font-family: 'Kalam', cursive;
-  color: white;
-  font-size: 4em;
-  margin-bottom: 10px;
-  transition: color 0.3s ease-in-out;
+.sectionOne #slide {
+  width: max-content;
+  margin-top: 50px;
 }
-
-h2.main-text:hover {
-  color: #ff6f61; /* Change to your desired hover color */
+.sectionOne .item {
+  height: 300px;
+  background-position: 50% 50%;
+  display: inline-block;
+  transition: 0.8s;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
 }
-
-h2.type-animation {
-  font-family: 'Kalam', sans-serif; /* Change to the desired font */
-  color: White; /* Change to the desired color */
-  font-size: 3.5em; /* Change to the desired font size */
-  margin-bottom: 10px;
+/* .sectionOne .item:nth-child(1), */
+.sectionOne .item:nth-child(2) {
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
 }
-
-p {
-  font-size: 1.5em;
-  color: white;
+.sectionOne .item:nth-child(3) {
+  left: 50%;
 }
-
-/* Animation */
-[data-aos="fade-up"] {
+.sectionOne .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.sectionOne .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+.sectionOne .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
-
-[data-aos="fade-up"].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
+.sectionOne .item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  padding: 0;
+  color: #eee;
+  transform: translate(0, -50%);
+  display: none;
+}
+.sectionOne .item:nth-child(2) .content {
+  display: block;
+  z-index: 11111;
+}
+.sectionOne .item .name {
+  font-size: 50px;
+  font-weight: bold;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 1 forwards;
+}
+.sectionOne .item .des {
+  font-size: 13px;
+  margin: 20px 0;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+}
+.sectionOne .item button {
+  padding: 10px 20px;
+  border: none;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+@keyframes showcontent {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
+.sectionOne .buttons {
+  position: absolute;
+  bottom: 30px;
+  z-index: 222222;
+  text-align: center;
+  width: 100%;
+}
+.sectionOne .buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  transition: 0.5s;
+}
+.sectionOne .buttons button:hover {
+  background-color: #bac383;
 }

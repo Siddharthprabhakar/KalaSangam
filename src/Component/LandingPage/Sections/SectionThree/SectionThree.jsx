@@ -2,49 +2,93 @@ import { useState, useEffect } from 'react';
 import './three.css'
 
 export function SectionThree() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const slides = [
-    'https://assets-global.website-files.com/61c11b4eea114eeb2cece931/64bf9bfb38f1f3db884370f8_Untitled%20design%20(34).jpg',
-    'https://assets-global.website-files.com/61c11b4eea114eeb2cece931/64bf9d1a6b409344b78c728d_Untitled%20design%20(35).jpg',
-    'https://assets-global.website-files.com/61c11b4eea114eeb2cece931/64bf9dfce155dc29dbba807f_Untitled%20design%20(36).jpg',
-  ];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 4000);
-
-    return () => clearInterval(intervalId);
-  }, [slides.length]);
 
   return (
-    <main>
-      <div>
-        <span>KalaSangam</span>
-        <h1>Sell products online</h1>
-        <hr />
-        <p>Showcase your products at their absolute best. Allow your visitors to browse your merchandise, add items to their cart, check out simply and efficiently, and leave product reviews.</p>
-        <a href="#">LEARN MORE</a>
-      </div>
-      <div style={{ width: '2000px', height: '500px', overflow: 'hidden', position: 'relative' }}>
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          style={{
-            width: '100%',
-            height: '100%',
-            position: 'absolute',
-            left: `${index * 100}%`,
-            transform: `translateX(-${activeIndex * 100}%)`,
-            transition: 'transform 0.5s ease-in-out',
-          }}
-        >
-          <img src={slide} alt={`Slide ${index + 1}`} style={{ width: '100%', height: '100%' }} />
+    <div className="sectionthree-main">
+    <section className="sectionthree">
+      <div className="threecontainer">
+        <div className="threewrapper">
+          <header>
+            <h2 className="heading-2">
+              Your Travel journey
+              <span className="highlight"> Starts Here</span>
+            </h2>
+          </header>
+          <div className="threecontent">
+            <a href="#" className="main-card">
+              <div className="main-card-visual">
+                <img
+                  className="main-card-image"
+                  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/services-section/images/main-img.avif"
+                  alt="Travel Discover"
+                  width="384"
+                  height="203"
+                />
+              </div>
+              <div className="meta">
+                <h1 className="heading-1">
+                  Enhance your voyage with tips, tools and more
+                </h1>
+                <div className="threecontrols">
+                  <div className="threebutton-link">Explore Booking Center</div>
+                </div>
+              </div>
+            </a>
+            <ul className="sectionthree-cards">
+              <li>
+                <a href="#" className="sectionthree-card padding-end">
+                  <div className="sectionthreecard-visual">
+                    <img
+                      className="sectionthreecard-image"
+                      src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/services-section/images/img-1.avif"
+                      alt="music event"
+                      width="194"
+                      height="135"
+                    />
+                  </div>
+                  <h3 className="heading-3">
+                    Plan all your trips with Travel Business Center
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="sectionthree-card sectionthreepadding-end">
+                  <div className="sectionthreecard-visual">
+                    <img
+                      className="sectionthreecard-image"
+                      src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/services-section/images/img-2.avif"
+                      alt="Greek Island"
+                      width="194"
+                      height="135"
+                    />
+                  </div>
+                  <h3 className="heading-3">
+                    Connect with Trip Partners to enhance your experience
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="sectionthree-card">
+                  <div className="sectionthreecard-visual">
+                    <img
+                      className="card-image"
+                      src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/services-section/images/img-3.avif"
+                      alt="Hotel with mountain view"
+                      width="194"
+                      height="135"
+                    />
+                  </div>
+                  <h3 className="heading-3">
+                    Unleash your wanderlust with Travel Academy
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      ))}
-    </div>
-    </main>
+      </div>
+    </section>
+  </div>
   );
 }
 

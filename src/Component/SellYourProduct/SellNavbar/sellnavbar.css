@@ -1,0 +1,200 @@
+.sellnavbar {
+  color: #f2f5f7;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+.sellnav {
+  height: 4.15rem;
+  width: 100vw;
+  background-color: #131418;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  position: fixed;
+  z-index: 10;
+}
+
+/*Styling selllogo*/
+.selllogo {
+  padding: 1vh 1vw;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-right: 10px;
+}
+
+/*Styling Links*/
+.sellnav-links {
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  padding: 0 0.7vw;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+.sellnav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+}
+.sellnav-links li a:hover {
+  color: white;
+}
+.sellnav-links li {
+  position: relative;
+}
+.sellnav-links li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: #61dafb;
+  position: absolute;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+}
+.sellnav-links li a:hover::before {
+  width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button {
+  background-color: transparent;
+  border: 1.5px solid #f2f5f7;
+  border-radius: 2em;
+  padding: 0.6rem 0.8rem;
+  margin-left: 2vw;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.login-button:hover {
+  color: #131418;
+  background-color: #f2f5f7;
+  border: 1.5px solid #f2f5f7;
+  transition: all ease-in-out 350ms;
+}
+.join-button {
+  color: #131418;
+  background-color: #61dafb;
+  border: 1.5px solid #61dafb;
+  border-radius: 2em;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.join-button:hover {
+  color: #f2f5f7;
+  background-color: transparent;
+  border: 1.5px solid #f2f5f7;
+  transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger {
+  display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px) {
+  .sellnav {
+    position: fixed;
+    z-index: 3;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .sellnav-links {
+    position: fixed;
+    background: #131418;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .sellnav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .sellnav-links.open li {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+
+  .sellnav-links.open li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .sellnav-links.open li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .sellnav-links.open li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .sellnav-links.open li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  .sellnav-links.open li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+
+  .sellnav-links.open li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  .hamburger.open .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.open .line2 {
+    opacity: 0;
+  }
+
+  .hamburger.open .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  li.fade {
+    opacity: 1;
+  }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

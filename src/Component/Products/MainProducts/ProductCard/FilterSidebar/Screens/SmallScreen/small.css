@@ -1,0 +1,69 @@
+.filterIcon{
+  margin: 20px;
+  height: 30px;
+  width: 30px;
+}
+
+.SmallSidebar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.SmallSidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.SmallSidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: transform 0.3s ease; /* Apply transition to transform property */
+  border: none;
+  cursor: pointer;
+}
+
+.SmallSidebar-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-options {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.color-label {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  padding: 5px; /* Add spacing between elements */
+}
+
+.radio-label {
+  margin-right: 10px;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.color-square {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Add spacing between square and text */
+}

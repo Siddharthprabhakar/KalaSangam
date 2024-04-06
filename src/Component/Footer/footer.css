@@ -7,7 +7,8 @@
   .footer-14398 {
     padding: 5rem ;
     background: #000;
-    height: 100vh;
+    position: relative;
+    z-index: 1000;
     color: #777; }
     .footer-14398 .footer-site-logo {
       color: #fff;

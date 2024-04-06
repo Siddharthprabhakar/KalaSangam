@@ -1,0 +1,290 @@
+.ProductDetails {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.ProductDetails .detailSection {
+  margin: 20px;
+  display: flex;
+  padding: 35px;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+}
+
+.ProductDetails .detailSection .logo {
+  font-size: 22px;
+}
+
+.ProductDetails .detailSection .menu ul {
+  display: flex;
+}
+
+.ProductDetails .detailSection .menu ul li {
+  margin: 0 15px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.ProductDetails .detailSection .menu ul li:hover:before {
+  content: "";
+  width: 15px;
+  transition: 0.5s;
+  height: 25px;
+  margin-left: 25px;
+  border-radius: 10%;
+  position: absolute;
+  border-bottom: 3px solid rgb(249, 48, 66);
+}
+
+.ProductDetails .detailSection .menu ul li:nth-child(1):before {
+  content: "";
+  width: 15px;
+  transition: 0.5s;
+  height: 25px;
+  margin-left: 25px;
+  border-radius: 10%;
+  position: absolute;
+  border-bottom: 3px solid rgb(249, 48, 66);
+}
+
+.ProductDetails .detail_container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  height: calc(100% - 15vh);
+  margin: 0 5%;
+  margin-top: 120px;
+}
+.ProductDetails .detail_container .text_container {
+  width: 40%;
+  padding: 45px 35px;
+  height: 90%;
+}
+
+.ProductDetails .detail_container .text_container h3 {
+  margin: 15px 0;
+  color: rgb(249, 48, 66);
+}
+
+.ProductDetails .detail_container .text_container h5 {
+  margin: 15px 0;
+  color: #565555;
+  line-height: 20px;
+}
+
+.ProductDetails .detail_container .text_container .detail_price {
+  margin: 30px 0;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.ProductDetails .detail_container .text_container .detail_buttons {
+  position: relative;
+  display: flex;
+  width: 126%;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ProductDetails .detail_container .text_container .detail_buttons input {
+  width: 35%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ProductDetails .detail_container .text_container .detail_buttons input:hover {
+  box-shadow: 0 0 2px #ddd;
+}
+
+.ProductDetails
+  .detail_container
+  .text_container
+  .detail_buttons
+  label:nth-child(1) {
+  content: "+";
+  width: 40px;
+  height: 43px;
+  position: absolute;
+  background: #ddd;
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 27%;
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+}
+
+.ProductDetails .detail_container .text_container .detail_buttons label {
+  cursor: pointer;
+  content: "";
+  width: 40px;
+  height: 43px;
+  position: absolute;
+  background: #ddd;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 27%;
+  z-index: 1;
+  top: 5px;
+  right: 185px;
+}
+
+.ProductDetails .detail_container .text_container .detail_buttons button {
+  padding: 20px 25px;
+  width: 40%;
+  background: rgb(249, 48, 66);
+  color: #fff;
+  transition: 0.5s all;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ProductDetails .detail_container .text_container .detail_buttons button:hover {
+  box-shadow: 0 0 16px rgb(249, 48, 66);
+  transition: 0.5s all;
+}
+
+.ProductDetails .detail_container .text_container .detail_buttons i {
+  margin-right: 10px;
+}
+.ProductDetails .detail_container .text_container .detail_buttons .quantity_controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3), 4px 7px 15px rgba(0, 0, 0, 0.2), 9px 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  max-width: 360px;
+  background: linear-gradient(225deg, rgba(242, 113, 33, 1) 0%, rgba(233, 64, 87, 1) 47%, rgba(138, 35, 135, 1) 100%);
+}
+
+.quantity_controls button,
+.quantity_controls input {
+  outline: none;
+  border: none;
+  padding: 16px;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+}
+
+.quantity_controls input {
+  width: 100px;
+  text-align: center;
+}
+
+.quantity_controls button:hover {
+  background-color: #e6e6e6;
+}
+
+.quantity_controls button:nth-last-child(1) {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.quantity_controls button:nth-child(1) {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.quantity_controls button:hover {
+  background-color: #e6e6e6;
+}
+
+.quantity_controls button:active {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ProductDetails .detail_container .detail_image {
+  width: 58%;
+  margin-top: -60px;
+  height: 90%;
+  padding: 45px 0;
+  position: relative;
+}
+
+.ProductDetails .detail_container .detail_image img {
+  width: 100%;
+  border-radius: 20px;
+  height: auto;
+}
+
+.ProductDetails .detail_container .onz {
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 60%;
+  left: 79%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.ProductDetails .detail_container .onz:before {
+  content: "";
+  border: 2px solid #fff;
+  width: 100%;
+  top: -2px;
+  left: -2px;
+  border-radius: 50%;
+  position: absolute;
+  height: 100%;
+  animation: 1s border infinite linear;
+}
+
+.detail_image .onz:hover .tool-tip {
+  opacity: 1;
+  transition: 0.5s all;
+  visibility: "visible";
+}
+
+@keyframes border {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1349px) {
+  .ProductDetails .detail_container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .ProductDetails .detail_container .text_container .detail_buttons {
+    position: relative;
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .ProductDetails .detail_container .text_container .detail_buttons button {
+    width: 30%;
+  }
+  .ProductDetails .detail_container .text_container,
+  .detail_image {
+    width: 100% !important;
+  }
+  .ProductDetails .detailSection .menu {
+    display: none !important;
+  }
+}
