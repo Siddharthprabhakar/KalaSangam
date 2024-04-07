@@ -27,7 +27,7 @@ export function App() {
         {isSellerRoute && <SellNavbar />} {/* Render seller navbar for seller routes */}
         <div className="App">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/*" element={<Home />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/product" element={<ProductPage />} />
             <Route path="/login" element={<LoginForm />} />
